@@ -1,17 +1,117 @@
 <!DOCTYPE html>
-<html>
-    <head>
-     <title>HELLO WORLD</title>
-    </head>
-    
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home - Prajwal Sidda</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Icons (Bootstrap Icons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
 
-    <body>
-        
-        
-        <h1><strong>Prajwal is Him</strong></h1>
-        <li>
-            Prajwal
-        </li>
-    </body>
+
+<body>
+
+    <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Prajwal's Website</a>
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle dark mode">🌙</button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="bi bi-house-door"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Bio.html"><i class="bi bi-person"></i>Bio</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="Projects.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-code-slash"></i>Projects
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="Projects.html#project1">Project 1</a></li>
+                        <li><a class="dropdown-item" href="Projects.html#project2">Project 2</a></li>
+                        <li><a class="dropdown-item" href="Projects.html#project3">Project 3</a></li>
+                        <li><a class="dropdown-item" href="Projects.html#project4">Project 4</a></li>
+                        <li><a class="dropdown-item" href="Projects.html#project5">Project 5</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <!-- Parallax Hero Banner -->
+    <div class="parallax">
+        <h1 class="text-center w-100" style="color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+        <strong>Welcome to My Website</strong>
+        </h1>
+    </div>
+
+    <!-- Main Content Section -->
+   <!-- Main Content Section -->
+    <main class="container my-5 py-5 bg-white rounded shadow-sm">
+        <div class="text-center">
+           <p class="lead fs-3 fw-normal text-secondary">A showcase of my projects, hobbies, and more.</p>
+            <hr class="w-25 mx-auto my-4">
+        </div>
+
+        <!-- Special Feature: Personalized Greeting -->
+        <div class="text-center my-4">
+          <label for="nameInput" class="form-label">What's your name?</label>
+          <div class="d-flex justify-content-center gap-2">
+            <input type="text" id="nameInput" class="form-control w-auto" placeholder="Type here" />
+            <button id="greetBtn" class="btn btn-primary">Say Hi</button>
+          </div>
+          <p id="greetOutput" class="mt-3 fs-5 fw-semibold"></p>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12 text-center text-muted">
+            <p>Content coming soon!</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+ <footer class="bg-dark text-white py-4 shadow-lg">
+  <div class="container d-flex justify-content-center align-items-center flex-wrap">
+    <div class="me-3 mb-2">Created by Prajwal Sidda &copy; 2026</div>
+    <a href="https://granadahigh.livermoreschools.org/" target="_blank" class="shadow__btn me-3 mb-2">
+      Granada High School
+    </a>
+    <a href="mailto:venkataramp.sid@lvjusd.org" class="btn btn-primary mb-2">
+      <i class="bi bi-envelope"></i>Gmail
+    </a>
+  </div>
+</footer>
+
+    <button id="backToTop" class="btn btn-primary rounded-circle shadow" aria-label="Back to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
+    <script>
+  // Highlight current page link in navbar
+  document.addEventListener('DOMContentLoaded', () => {
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.navbar .nav-link').forEach(link => {
+      const linkPath = new URL(link.href).pathname;
+      if (linkPath === currentPath) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+</body>
 </html>
